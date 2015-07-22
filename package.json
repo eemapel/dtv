@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/eemapel/dtv/issues"
   },
-  "homepage": "https://github.com/eemapel/dtv"
+  "homepage": "https://github.com/eemapel/dtv",
+  "dependencies": {
+    "wlog": "*"
+  }
 }
