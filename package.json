@@ -1,6 +1,6 @@
 {
   "name": "dtv",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Dependency Tree Validator",
   "main": "index.js",
   "scripts": {
