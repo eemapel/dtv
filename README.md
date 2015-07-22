@@ -1,6 +1,10 @@
 # dtv
 Dependency Tree Validator
 
+Usage
+=====
+* Run in directory with ```node_modules``` tree
+
 Categories
 ==========
 * Dependency names must be lower case

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 var fs = require('fs')
+var wlog = require('wlog')
 
 var packages = []
 
@@ -18,5 +19,11 @@ var subtree = function(path) {
     }
 }
 
-subtree(__dirname);
+var summary = function() {
+    wlog.tag("SUMMARY")
+    wlog.note("Total number of dependencies: " + (packages.length - 1))
+}
+
+subtree(__dirname)
+summary()
 
