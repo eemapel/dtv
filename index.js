@@ -12,9 +12,21 @@ var subtree = function(path) {
     packages.push(JSON.parse(pkgjson))
 
     if (fs.existsSync(path + "/node_modules")) {
+        // Save installated dependencies for currently processed package to an array
         var dependencies = fs.readdirSync(path + "/node_modules")
+
+        // Remove known non-dependency directories from the list, like npm link directory
+        var index = dependencies.indexOf(".bin")
+        if (index >= 0) {
+            dependencies.splice(index, 1)
+        }
+
         dependencies.forEach(function(item) {
-            subtree(path + "/node_modules/" + item)
+            var next_path = path + "/node_modules/" + item
+            if (!fs.existsSync(next_path)) {
+                wlog.err("Path not found for " + next_path)
+            }
+            subtree(next_path)
         })
     }
 }
