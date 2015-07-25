@@ -4,7 +4,7 @@
   "description": "Dependency Tree Validator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jshint *.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/eemapel/dtv",
   "dependencies": {
-    "wlog": "*"
+    "wlog": "latest"
+  },
+  "devDependencies": {
+    "jshint": "latest"
   }
 }
